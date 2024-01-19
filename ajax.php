@@ -91,7 +91,7 @@ class CatalogFavoriteComponentAjaxController extends Controller
 
         $getFavorite = $arUser['UF_FAVORITES'];
 
-        if (is_null($getFavorite)) {
+        if (!$getFavorite) {
             $favorite[] = $id;
         } else {
             $favorite = $getFavorite;
